@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div 
+{
+ 
+  height: 100px;
+  background: cyan;
+  transition: width 2s, height 4s;
+  transition-delay: 1s;
+}
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+div:hover 
+{
+  height: 300px;
+  background: pink;
+}
+</style>
+</head>
+<body>
+<nav> <a href = "index.html"> HOME </a> </nav>
+<h1>The Transition Property</h1>
+<!--To create a transition effect, you must specify two things:the CSS property you want to add an effect to ,the duration of the effect-->
+<p>Hover over the element below, to see the transition effect:</p>
+<div>MOUSE OVER</div>
+<br>
+<!--The transition-timing-function property specifies the speed curve of the transition effect.-->
+<div id="div1">linear - specifies a transition effect with the same speed from start to end</div><br>
+<div id="div2">ease- specifies a transition effect with a slow start, then fast, then end slowly (this is default)</div><br>
+<div id="div3">ease-in - specifies a transition effect with a slow start</div><br>
+<div id="div4">ease-out - specifies a transition effect with a slow end </div><br>
+<div id="div5">ease-in-out - specifies a transition effect with a slow start and end</div><br>
+</body>
+</html>

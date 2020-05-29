@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ANIMATION</title>
+	<style>
+		section
+		{
+			width: 30%;
+			background-color: yellow;
+			margin: 10px;
+			padding: 10px;
+			float:left;
+			border: 1px solid #FF0000
+		}
+		canvas
+		{
+			align-items: center;
+		}
+		#myCanvas1  { width: 100px;height: 100px;background-color: cyan; position: relative;animation-name: example;animation-duration: 4s;}
+		#myCanvas2  { width: 100px;height: 100px;background-color: cyan; position: relative;animation-name: example;animation-duration: 4s;}
+		#myCanvas3  { width: 100px;height: 100px;background-color: cyan; position: relative;animation-name: example;animation-duration: 4s;}
+		#myCanvas4  { width: 100px;height: 100px;background-color: cyan; position: relative;animation-name: example;animation-duration: 4s;}
+		@keyframes example  
+	 
+		{
+
+          0%   {background-color:cyan; left:0px; top:0px;}
+          25%  {background-color:pink; left:200px; top:0px;}
+          50%  {background-color:orange; left:200px; top:200px;}
+          75%  {background-color:brown; left:0px; top:200px;}
+          100% {background-color:white; left:0px; top:0px;}
+        }
+        #A2
+        {
+        	 width: 100px;
+             height: 100px;
+             background-color: cyan;
+             position: relative;
+             animation-name: examp;
+             animation-duration: 4s;
+             animation-iteration-count: 1;
+             animation-direction: alternate-reverse; 
+        }
+        @keyframes examp
+        {
+        0%   {background-color:cyan; left:0px; top:0px;}
+        25%  {background-color:pink; left:200px; top:0px;}
+        50%  {background-color:orange; left:200px; top:200px;}
+        75%  {background-color:brown; left:0px; top:200px;}
+        100% {background-color:white; left:0px; top:0px;}
+}
+	</style>	
+</head>
+<body bgcolor="red">
+    <nav> <a href = "index.html"> HOME </a> </nav>
+	ANIMATION
+	<!--An animation lets an element gradually change from one style to another.-->
+     <br>
+     <br>
+	<section>CANVAS DEMO
+		 <br>
+		Circle<br>
+        <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+        <br>Linear Gradient</br>
+        <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+        <br>Circular Gradient
+        <br>
+        <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+        <br>Rectangle<br>
+        <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+       </section> 
+<!-- java script code   -->     
+<script>
+var c = document.getElementById("myCanvas1");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+</script> 
+<script>
+var c = document.getElementById("myCanvas2");
+var ctx = c.getContext("2d");
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+</script>
+<script>
+var c = document.getElementById("myCanvas3");
+var ctx = c.getContext("2d");
+var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+</script>
+<script>
+var c = document.getElementById("myCanvas4");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.rect(10, 10, 60, 40);
+ctx.stroke();
+</script> 
+<section >SVG DEMO
+<br>
+Circle<br>
+<svg id ="A2" width="200" height="100" style="border:1px solid #000000;border-color: green">
+<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+<br>Rectangle</br>
+<svg id="A2" width="200" height="100" style="border:1px solid #000000;border-color: green">
+ <rect width="100" height="80" style="fill:rgb(24,24,24);stroke-width:10;stroke:rgb(34,56,45)" /></svg>
+ <br>Round Rectangle</br>
+ <svg id="A2" width="200" height="100" style="border:1px solid #000000;border-color: green">
+ <rect x="30" y="20" rx="20" ry="20" width="50" height="70" style="fill:green;stroke:black;stroke-width:5;opacity:0.5" /></svg> 
+<br>Square<br>
+<svg id="A2" width="200" height="100" style="border:1px solid #000000;border-color: green">
+<rect width="50" height="50" style="fill:rgb(0, 255, 128);stroke-width:10;stroke:rgb(255,0,0);" /></svg>
+</section>
+</body>
+</html>

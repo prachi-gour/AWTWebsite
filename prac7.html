@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 TRANSFORM</title>
+	<style>
+		section
+		{
+			width: 30%;
+			background-color: yellow;
+			margin: 10px;
+			padding: 10px;
+			float:left;
+			border: 1px solid #FF0000
+		}
+		canvas
+		{
+			align-items: center;
+		}
+		#myCanvas11                                  
+		{
+			transform: skew(20deg);               //The skew() method skews an element into a given angle.
+		}
+		#myCanvas22
+		{
+			transform: skewX(40deg);             //The skewX() method skews an element along the X-axis by the given angle.
+		}
+		#myCanvas33
+		{
+			transform: skewY(-10deg);            //The skewY() method skews an element along the Y-axis by the given angle.
+
+		}
+		#myCanvas44
+		{
+			transform: skew(-5deg,15deg);        //The skew() method skews an element into a given angle.
+		}
+		#mySvg1
+		{
+			transform: rotate(34deg);           //The rotate() method rotates an element clockwise or counter-clockwise according to a given degree.
+		}
+		#mySvg2
+		{
+			transform: scale(1.5,0.5);          //The scale() method increases or decreases the size of an element.
+		}
+		#mySvg3
+		{
+			transform: translate(20px, -20px);  //The translate() method moves an element from its current position. 
+		}
+		#mySvg4
+		{
+			transform: matrix(1, 0, 0.5, 1, 40, 0);  //The matrix() method combines all the 2D transform methods into one.
+		}
+	</style>	
+</head>
+<body bgcolor="red">
+	<nav> <a href = "index.html"> HOME </a> </nav>
+	<section>CANVAS DEMO
+		<p>The HTML canvasThe HTML canvas element is used to draw graphics, on the fly, via JavaScript.
+         The canvas element is only a container for graphics. You must use JavaScript to actually draw the graphics. element is used to draw graphics, on the fly, via JavaScript.</p>
+         <br>
+
+		Circle<br>
+        <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+        <canvas id="myCanvas11" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+        <br>Linear Gradient</br>
+        <canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+         <canvas id="myCanvas22" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+        <br>Circular Gradient
+        <br>
+        <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+         <canvas id="myCanvas33" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+        <br>Rectangle<br>
+        <canvas id="myCanvas4" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+        <canvas id="myCanvas44" width="200" height="100" style="border:1px solid #000000;border-color: green"></canvas>
+       </section> 
+<!-- java script code   -->     
+<script>
+var c = document.getElementById("myCanvas1");    // Normal canvas for circle    
+var ctx = c.getContext("2d");  
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+var c_skew = document.getElementById("myCanvas11");  //Circle canvas transform 20deg using skew method
+var ctx_skew = c_skew.getContext("2d");
+ctx_skew.beginPath();
+ctx_skew.arc(95,50,40,0,2*Math.PI);
+ctx_skew.stroke();
+
+</script> 
+<script>
+var c = document.getElementById("myCanvas2");      //Normal canvas for linear gradient
+var ctx = c.getContext("2d");
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+var c_skewX = document.getElementById("myCanvas22");     //Linear gradient transform 40deg using skewX method
+var ctx_skewX = c_skewX.getContext("2d");
+var grd_skewX = ctx_skewX.createLinearGradient(0,0,200,0);
+grd_skewX.addColorStop(0,"red");
+grd_skewX.addColorStop(1,"white");
+ctx_skewX.fillStyle = grd_skewX;
+ctx_skewX.fillRect(10,10,150,80);
+</script>
+<script>
+var c = document.getElementById("myCanvas3");      //Normal canvas for circular gradient
+var ctx = c.getContext("2d");
+var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+var c_skewY = document.getElementById("myCanvas33");     //Circular gradient transform -10deg using skewY method
+var ctx_skewY = c_skewY.getContext("2d");
+var grd_skewY = ctx_skewY.createRadialGradient(75,50,5,90,60,100);
+grd_skewY.addColorStop(0,"red");
+grd_skewY.addColorStop(1,"white");
+ctx_skewY.fillStyle = grd_skewY;
+ctx_skewY.fillRect(10,10,150,80);
+</script>
+<script>
+var c = document.getElementById("myCanvas4");         //Normal canvas for Reactangle 
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.rect(10, 10, 60, 40);
+ctx.stroke();
+var c_skewXY = document.getElementById("myCanvas44");    //Rectangle transform (-5deg,15deg) using skew method
+var ctx_skewXY = c_skewXY.getContext("2d");
+ctx_skewXY.beginPath();
+ctx_skewXY.rect(10, 10, 60, 40);
+ctx_skewXY.stroke();
+</script> 
+<section>SVG DEMO
+<p>The HTML svg element is a container for SVG graphics.
+SVG stands for Scalable Vector Graphics.<br>
+SVG is used to define graphics for the Web.<br>
+SVG is a W3C recommendation</p>
+<br>
+Circle<br>
+<svg width="200" height="100" style="border:1px solid #000000;border-color: green">     //Normal svg for circle
+<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+<svg id = "mySvg1" width="200" height="100" style="border:1px solid #000000;border-color: green">    //Circle transform 30deg using rotate method
+<circle  cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+<br>Rectangle</br>
+<svg width="200" height="100" style="border:1px solid #000000;border-color: green">    //Normal svg for rectangle
+<rect width="100" height="80" style="fill:rgb(24,24,24);stroke-width:10;stroke:rgb(34,56,45)" />
+</svg>
+<svg id ="mySvg2" width="200" height="100" style="border:1px solid #000000;border-color: green">    //Rectangle transform (1.5,0.5)deg using scale method
+<rect width="100" height="80" style="fill:rgb(24,24,24);stroke-width:10;stroke:rgb(34,56,45)" />
+</svg>
+<br>Round Rectangle</br>
+<svg width="200" height="100" style="border:1px solid #000000;border-color: green">     //Normal svg for RoundRectangle
+<rect x="30" y="20" rx="20" ry="20" width="50" height="70" style="fill:green;stroke:black;stroke-width:5;opacity:0.5" />
+</svg> 
+<svg  id ="mySvg3" width="200" height="100" style="border:1px solid #000000;border-color: green">//RoundRectangle transform(20px,-20px) using translate method
+<rect x="30" y="20" rx="20" ry="20" width="50" height="70" style="fill:green;stroke:black;stroke-width:5;opacity:0.5" />
+</svg> 
+<br>Square<br>
+<svg width="200" height="100" style="border:1px solid #000000;border-color: green">    //Normal svg for Square
+<rect width="50" height="50" style="fill:rgb(0, 255, 128);stroke-width:10;stroke:rgb(255,0,0);" />
+</svg>
+<svg  id ="mySvg4" width="200" height="100" style="border:1px solid #000000;border-color: green">  //Square transform using matrix() method
+<rect width="50" height="50" style="fill:rgb(0, 255, 128);stroke-width:10;stroke:rgb(255,0,0);" />
+</svg>
+</section>
+</body>
+</html>

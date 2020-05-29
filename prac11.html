@@ -1,0 +1,105 @@
+<!DOCTYPE html>   <!--contactus2.html-->
+<html>
+<head>
+  <title>Validation Form</title>
+  <script type="text/javascript">
+  	function text()
+  	{
+  		var a=String(document.getElementById("A").value);
+        var b=String(document.getElementById("C").value);
+        var c=String(document.getElementById("D").value);
+        var e=String(document.getElementById("E").value);
+        var f=String(document.getElementById("F").value);
+        if(a == "" || b == ""|| c == "" ||e == ""||f=="")         //Validating empty fields
+        {
+        alert("Plz enter required fields.")
+        }
+        var h = document.getElementById("1").value;                //Validating date 
+        if(h== "")
+        {
+        	alert("Please enter a valid date");
+        }
+        
+  	 }
+  </script>
+  	
+</head>
+<body bgcolor="yellow">
+   <nav> <a href = "index.html"> HOME </a> </nav>
+    <h1><u>CONTACT US</u><h1>     
+  <form>
+         
+     <table>
+         <tr>
+               <td>First Name:</td>
+               <td><input   type="text" name="First Name" id="A" required placeholder="Enter First Name"></td>
+          </tr>
+          
+         <tr>
+               <td>Second Name:</td>
+               <td><input   type="text" name="Second Name" id="B" placeholder="Enter Second Name"></td>
+          </tr>
+          
+         <tr>
+               <td>Last Name:</td>
+               <td><input   type="text" name="Last Name" id='C' required placeholder="Enter Last Name"></td>
+          </tr>
+          
+         <tr>
+               <td>Gender:</td>
+               <td>Male<input   type="radio" name="Gender" >Female<input   type="radio" name="Gender"></td>
+          </tr>
+            
+         <tr>
+               <td>Address:</td>
+               <td><textarea height="100" width="100"></textarea></td>
+          </tr>
+       
+         <tr>
+               <td>Phone Number:</td>
+               <td><input   type="number" name="Phone Number" id='D' required placeholder="Please Enter your Phone Number" ></td>
+          </tr>
+         
+         <tr>
+               <td>Email id:</td>
+               <td><input   type="mail" name="Email id" id='E' required placeholder="Enter your email-id"></td>
+          </tr>
+          <tr>
+          	  <td>DOB: </td>
+          	  <td><input type = "date" name="DOB" id='1' required></td>
+          </tr>	  
+ 
+         <tr>
+               <td>Hobbies:</td>
+               <td><input type="checkbox" name="Hobbies">Reading<input type="checkbox" name="Hobbies">Music<input type="checkbox" name="Hobbies">Sports
+              <input type="checkbox" name="Hobbies">Others</td>
+             
+              
+          </tr>
+        
+         <tr>
+               <td>City:</td>
+               <td><input   type="text" name="City"></td>
+          </tr>
+         
+         <tr>
+               <td>State:</td>
+               <td><input   type="text" name="State"></td>
+          </tr>
+       
+         <tr>
+               <td>Country:</td>
+               <td><input   type="text" name="Country" id='F' required></td>
+          </tr>
+         
+         <tr>
+               <td>College Name:</td>
+               <td><input   type="text" name="College name"></td>
+          </tr>
+          <tr>
+               <td><input type="Submit" name="Submit" onclick="text()" value="Submit"></td>
+           </tr>
+</table>
+</form>
+</body>
+</html>

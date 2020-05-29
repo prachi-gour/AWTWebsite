@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///C:/Users/ADMIN/Desktop/prac5.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+
+#lgrad1 
+{
+    height: 100px;
+    width: 330px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(blue 20%,orange 60%); /* Standard syntax (must be last) */
+}
+#lgrad2
+ {
+    height: 100px;
+    width: 330px;
+    background: linear-gradient(to right, blue 30% , orange 20%); /* Standard syntax */
+}
+#lgrad3
+ {
+    height: 100px;
+    width: 330px;
+    background: linear-gradient(to bottom right, blue, orange); /* Standard syntax*/
+}
+#lgrad4
+{
+	height: 100px;
+	width: 330px;
+    background: linear-gradient(0deg, blue, orange); /* Standard syntax */
+
+}
+#lgrad5
+{
+	height: 100px;
+	width: 330px;
+   background: linear-gradient(90deg, blue, orange); /* Standard syntax */
+}
+#lgrad6
+{
+	height: 100px;
+	width: 330px;
+    background: linear-gradient(180deg, blue, orange); /* Standard syntax */
+}
+#lgrad7
+{
+	height: 100px;
+	width: 330px;
+	background: linear-gradient(-90deg, blue, orange); /* Standard syntax */
+}
+#lgrad8
+{
+    height: 100px;
+	width: 330px;
+	background: linear-gradient(blue, yellow, orange); /* Standard syntax */
+}
+#lgrad9
+{
+    height: 100px;
+	width: 330px;
+	background: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+}
+#lgrad10
+{
+    height: 100px;
+	width: 330px;
+	background: linear-gradient(orange 10%, yellow 85%, blue 90%); 
+}
+#lgrad11
+{
+    height: 100px;
+	width: 330px;
+	background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+#lgrad12
+{
+	height: 100px;
+	width: 330px;
+	background: repeating-linear-gradient(blue, yellow 10%, orange 20%);  
+}
+#lgrad13
+{
+	height: 100px;
+	width: 330px;
+	background: repeating-linear-gradient(45deg,blue,yellow 7%,orange 10%); 
+}
+#lgrad14
+{
+	height: 100px;
+	width: 330px;
+	background: repeating-linear-gradient(190deg,blue,yellow 7%,orange 10%); 
+}
+#lgrad15
+{
+	height: 100px;
+	width: 330px;
+	background: repeating-linear-gradient(90deg,blue,yellow 7%,orange 10%); 
+
+}
+#rgrad1
+{
+    height: 100px;
+	width: 330px;
+	background: radial-gradient(blue, yellow, orange); 
+}
+#rgrad2
+{
+	height: 100px;
+	width: 330px;
+	background: radial-gradient(blue 5%, yellow 15%, orange 60%); 
+}
+#rgrad3
+{
+    height: 100px;
+	width: 330px;
+	background: radial-gradient(blue, yellow, orange);
+}
+#rgrad4
+{
+    height: 100px;
+	width: 330px;
+	background: radial-gradient(circle, blue, yellow, orange); 
+}
+#rgrad5
+{
+    height: 100px;
+	width: 330px;
+	background: radial-gradient(closest-side at 60% 55%, blue, yellow, orange); 
+}
+#rgrad6
+{
+    height: 100px;
+	width: 330px;
+	background: radial-gradient(farthest-side at 60% 55%, blue, yellow, orange); 
+}
+#rgrad7
+{
+    height: 100px;
+	width: 330px;
+	background: radial-gradient(closest-corner at 60% 55%, blue, yellow, orange); 
+}
+#rgrad8
+{
+    height: 100px;
+	width: 330px;
+	background: radial-gradient(farthest-corner at 60% 55%, blue, yellow, orange); 
+}
+#rgrad9
+{
+	height: 100px;
+	width: 330px;
+	background: repeating-radial-gradient(blue, yellow 10%, orange 15%); 
+}
+
+</style> </head>
+<body bgcolor="pink">
+<nav> <a href = "index.html"> HOME </a> </nav>	
+<h1>GRADIENT</h1>
+<h3>CSS gradients let you display smooth transitions between two or more specified colors.</h3>
+<br>
+<h2>LINEAR GRADIENT </h2>
+<!--To create a linear gradient you must define at least two color stops.
+ Color stops are the colors you want to render smooth transitions among. -->
+<h3>Linear Gradient - Top to Bottom</h3>
+<div id="lgrad1"></div>
+<h3>Linear Gradient - Left to Right</h3>
+<div id="lgrad2"></div>
+<h3>Linear Gradient - Diagonal</h3>
+<div id="lgrad3"></div>
+<h3>Linear Gradients - Using Different Angles</h3>
+<div id="lgrad4" style="text-align:center;">0deg</div><br>
+<div id="lgrad5" style="text-align:center;">90deg</div><br>
+<div id="lgrad6" style="text-align:center;">180deg</div><br>
+<div id="lgrad7" style="text-align:center;">-90deg</div>
+<h3>Linear Gradients - Multiple Color Stops</h3>
+<h4>3 Color Stops (evenly spaced)</h4>
+<div id="lgrad8"></div>
+<h4>7 Color Stops (evenly spaced)</h4>
+<div id="lgrad9"></div>
+<h4>3 Color Stops (not evenly spaced)</h4>
+<div id="lgrad10"></div>
+ <!-- Note: Color stops are automatically spaced evenly when no percents are specified. -->
+<h3> Multiple Color with Text </h3>
+<div id="lgrad11"> Hello!Linear Gradient </div>
+<h3>Repeating Linear Gradient</h3>
+<div id="lgrad12"></div>
+<h3>Repeating gradient on 45deg axe</h3>
+<div id="lgrad13"></div>
+<h3>Repeating gradient on 190deg axe </h3>
+<div id="lgrad14"> </div>
+<h3>Repeating gradient on 90deg axe</h3>
+<div id="lgrad15"></div>
+
+<h2>RADIAL GRADIENT</h2>
+<!--A radial gradient is defined by its center.
+To create a radial gradient you must also define at least two color stops.-->
+<h3>Radial Gradient - Evenly Spaced Color Stops</h3>
+<div id="rgrad1"></div>
+<h3>Radial Gradient - Differently Spaced Color Stops</h3>
+<div id="rgrad2"></div>
+<h3>Ellipse (Default)</h3>
+<div id="rgrad3"></div>
+<h3>Circle</h3>
+<div id="rgrad4"></div>
+<h3>Radial Gradients - Different size keywords</h3>
+<h4>closest-side</h4>
+<div id="rgrad5"></div>
+<h4>farthest-side</h4>
+<div id="rgrad6"></div>
+<h4>closest-corner</h4>
+<div id="rgrad7"></div>
+<h4>farthest-corner(Default)</h4>
+<div id="rgrad8"></div>
+<h3>Repeating Radial Gradient</h3>
+<div id="rgrad9"></div>
+
+
+
+
+</body></html>

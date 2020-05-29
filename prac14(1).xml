@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- XML Namespace is a mechanism by which element or attribute is assigned to a group. -->
+<?xml-stylesheet type="text/xsl "href="prac14(1).xslt" ?> 
+<catalogue> 
+  <cd> 
+   <title>Goa Beach</title> 
+   <artist> Neha Kakkar</artist> 
+   <price>20</price> 
+   <year> 2020 </year> 
+  </cd> 
+    <cd> 
+   <title>Chandigarh Mein</title> 
+   <artist> Badshah</artist> 
+   <price>20</price> 
+   <year> 2019 </year> 
+  </cd> 
+   <cd> 
+   <title>Kolavarid</title> 
+   <artist> Dhanush</artist> 
+   <price>20</price> 
+   <year> 2011 </year> 
+  </cd>
+   <cd> 
+   <title>Filhal</title> 
+   <artist> B Praak</artist> 
+   <price>20</price> 
+   <year> 2020 </year> 
+  </cd> 
+</catalogue> 

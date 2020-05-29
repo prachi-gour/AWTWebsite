@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickCounter() 
+{
+  
+  if (typeof(Storage) !== "undefined")
+   {
+    
+    if (localStorage.clickcount)
+     {
+
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } 
+    else
+    {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("resultloc").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } 
+}
+function clickCounter1() 
+{
+  if (typeof(Storage) !== "undefined") 
+  {
+    if (sessionStorage.clickcount) 
+    {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else 
+    {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("resultsess").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } 
+}
+</script>
+</head>
+<body>
+  <nav> <a href = "index.html"> HOME </a> </nav>
+<p>Click the button to see the counter increase.</p>
+<p><button onclick="clickCounter()" type="button">Click me for local storage!</button></p>
+
+<div id="resultloc"></div>
+<p><button onclick="clickCounter1()" type="button">Click me for session storage!</button></p>
+<div id="resultsess"></div>
+
+
+
+</body>
+</html>

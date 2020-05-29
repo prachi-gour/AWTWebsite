@@ -1,0 +1,115 @@
+<html>   <!--contactus1.html-->
+<head>
+  <title>Contact Us</title>
+</head>
+<body bgcolor="yellow" style=" font-size: 20px">
+  <nav> <a href = "index.html"> HOME </a> </nav>
+    <h1><u>CONTACT US</u><h1>
+  <form>
+         
+     <table>
+         <tr>
+               <td>Name:</td>
+               <td><input   type="text" name="Name" id="1"></td>
+          </tr>
+          
+          <tr>
+               <td>Phone Number:</td>
+               <td><input   type="number" name="Phone Number" id="2"></td>
+          </tr>
+          <tr>
+               <td>Email id:</td>
+               <td><input   type="mail" name="Email id" id="3"></td>
+          </tr>
+            <tr>
+               <td>Address:</td>
+               <td><textarea height="100" width="100" id="4"></textarea></td>
+          </tr>
+       
+        
+         <tr>
+               <td>Gender:</td>
+               <td>MALE<input   type="radio" name="Gender" value="Male" id="5">FEMALE<input   type="radio" name="Gender" value= "Female" id="6"></td>
+          </tr>
+          <tr>
+               <td>Where you came to know about my site??:</td>
+               <td><input type="checkbox" name="abc" id ="7" value="Friends">Friends<input type="checkbox" name="abc" value ="Social Media" id="8">Social Media<input type="checkbox" name="abc" value="Guide" id ="9">Guide
+              <input type="checkbox" name="abc" value="Others" id ="10">Others</td>
+             
+              
+          </tr>
+        
+        
+          <tr>
+               <td><button type="button"   onclick="myFunction()">Submit</button></td>
+           </tr>
+</table>
+</form>
+<hr>
+Submitted Data:
+<p id ="demo" style="font-size: 20px"> 
+
+</p>
+<script type = "text/javascript">
+   
+        function myFunction() 
+        { 
+            var a =   document.getElementById("1").value; 
+            var b =   document.getElementById("2").value;
+           var c =   document.getElementById("3").value;
+            var d =   document.getElementById("4").value;
+           var e =   document.getElementById("5").value;
+             var f =   document.getElementById("6").value;
+             var g =   document.getElementById("7").value;
+             var h =   document.getElementById("8").value;
+            var i =   document.getElementById("9").value;
+             var j =   document.getElementById("10").value;
+              document.getElementById("demo").innerHTML = 'Name: '+a+'<br>'+'Phone Number: '+b+'<br>' + 'Email-id: '+c+'<br>' + 'Address: '+d+'<br>'; 
+              if(document.getElementById('5').checked)
+              {
+                document.getElementById("demo").innerHTML += 'Gender: '+e+'<br>';
+              }
+              if(document.getElementById('6').checked)
+              {
+                document.getElementById("demo").innerHTML += 'Gender: '+f+'<br>';
+              }
+              if(document.getElementById('7').checked)
+              {
+                document.getElementById("demo").innerHTML += 'Where you came to know about my site??: '+g+'<br>';
+              }
+              if(document.getElementById('8').checked)
+              {
+                document.getElementById("demo").innerHTML += 'Where you came to know about my site?? '+h+'<br>';
+              }
+              if(document.getElementById('9').checked)
+              {
+                document.getElementById("demo").innerHTML += 'Where you came to know about my site?? '+i+'<br>';
+              }
+              if(document.getElementById('10').checked)
+              {
+                document.getElementById("demo").innerHTML += 'Where you came to know about my site?? '+j+'<br>';
+              }
+           } 
+    </script> 
+   
+
+<button onclick="getLocation()">Get your coordinates</button>                <!-- Code for geolocation  to get users latitude and longitude-->
+
+<p id="demo1" style="font-size: 20px"></p>
+    <script>
+var x = document.getElementById("demo1");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } 
+}
+
+function showPosition(position) {                                                
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude + "<br>Altitude:" + position.coords.altitude ;
+}
+</script>
+
+</body>
+
+</html>
